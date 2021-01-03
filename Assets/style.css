@@ -1,0 +1,110 @@
+body{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%; 
+    background: linear-gradient(rgb(146, 237, 240), rgb(47, 235, 203)); 
+    height: 16%; 
+    display: flex;
+}
+
+.profile-header{
+    display: flex; 
+    padding-top: 40px;
+}
+
+.profile-name{
+    padding-left: 25px; 
+    padding-top: 20px;
+}
+
+.profile{
+    border-radius: 100px; 
+    border: 3px solid white; 
+    width: 100px;
+}
+
+.card-styling{
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 40px rgb(218, 210, 210);
+    border-radius: 20px;
+    width: 28rem;
+    height: 16rem;
+}
+
+.container{
+    /* padding-top: 20px; */
+    display: flex; 
+    flex-direction: column;
+}
+
+.main-body{
+    padding-top: 2%;
+}
+
+.achievement{
+    transform: translateY(-30%);
+}
+
+.logo{
+    width: 100px; 
+    height: 50px;
+}
+
+.log{
+    padding-top: 50px;
+}
+
+.card2{
+    padding-top: 0%; padding-left: 5%;
+}
+
+@media (max-width: 1025px){
+
+    .header{
+        height: 13%;
+    }
+
+    .profile-header{
+        padding-left: 20px;
+        padding-top: 80px;
+    }
+
+    .main-body{
+        padding-top: 5%;
+    }
+
+    .logo{
+        transform: translateX(-70%);
+    }
+
+    .log{
+        padding-top: 100px;
+    }
+
+    .card2{
+        padding-left: 0%;
+    }
+}
+
+@media (max-width: 769px){
+    .profile-header{
+        padding-top: 50px;
+    }
+
+    .card-styling{
+        width: 23rem;
+    }
+
+    .log{
+        padding-top: 70px;
+    }
+
+    .card3{
+        width: 20rem;
+    }
+}
