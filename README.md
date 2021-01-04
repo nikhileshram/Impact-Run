@@ -14,4 +14,4 @@ Structure of JSON Model - {
   Profile_Pic: String
 }
 
-
+The Website has been hosted on netlify.com and API has been hosted on Heroku.
