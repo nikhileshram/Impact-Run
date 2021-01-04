@@ -7,6 +7,15 @@
     justify-content: center;
 }
 
+.loader{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
 .profile-header{
     padding-top: 30px;
 }

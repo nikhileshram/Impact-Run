@@ -1,3 +1,9 @@
+function myfunction(){
+    setTimeout(function(){
+        $('.loader').css('display', 'none');
+    }, 2000)
+}
+
 window.onresize = function (event) {
     document.location.reload(true);
 }
@@ -6,11 +12,11 @@ var href = window.location.href.split("/")
 var html_location = href[href.length - 1]
 
 if (window.innerWidth > 540 && html_location !== "index.html") {
-    window.location = "index.html";
+    window.location = "../index.html";
 }
 
 if (window.innerWidth <= 540 && html_location !== "index2.html") {
-    window.location = "index2.html";
+    window.location = "../index2.html";
 }
 
 fetch('https://impact-run-api.herokuapp.com/')
@@ -25,3 +31,5 @@ fetch('https://impact-run-api.herokuapp.com/')
     $('#max_streak').html(json.Max_Streak)
     $('.profile').attr('src', json.Profile_Pic)
 })
+
+

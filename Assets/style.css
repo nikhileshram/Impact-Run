@@ -4,6 +4,15 @@ body{
     margin: 0px;
 }
 
+.loader{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
 .header{
     font-family: 'Montserrat', sans-serif;
     width: 100%; 
