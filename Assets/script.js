@@ -1,9 +1,12 @@
+//Preloader disappear when screen loading is complete
+
 function myfunction(){
     setTimeout(function(){
         $('.loader').css('display', 'none');
     }, 2000)
 }
 
+//Displaying different html page according to screen size
 window.onresize = function (event) {
     document.location.reload(true);
 }
@@ -19,9 +22,13 @@ if (window.innerWidth <= 540 && html_location !== "index2.html") {
     window.location = "../index2.html";
 }
 
+
+// Fetching data from api
 fetch('https://impact-run-api.herokuapp.com/')
 .then(response => response.json())
 .then(json => {
+
+    //Placing data on webpage
     $('#name').html(json.Name)
     $('#title').html(json.Title)
     $('#amount').html(json.Amount)

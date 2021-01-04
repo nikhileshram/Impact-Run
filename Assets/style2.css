@@ -1,3 +1,5 @@
+/* Header */
+
 .header{
     font-family: 'Montserrat', sans-serif;
     width: 100%; 
@@ -7,6 +9,8 @@
     justify-content: center;
 }
 
+
+/* Preloader styling */
 .loader{
     height: 100%;
     width: 100%;
@@ -16,6 +20,7 @@
     background-color: lightgray;
 }
 
+/* Profile */
 .profile-header{
     padding-top: 30px;
 }
@@ -36,6 +41,7 @@
     padding-top: 150px;
 }
 
+/* Cards */
 .card-styling{
     -webkit-box-shadow: 0 0 10px #fff;
     box-shadow: 0 0 40px rgb(218, 210, 210);
@@ -69,6 +75,10 @@
     font-weight: 600;
 }
 
+
+/* Media Queries */
+
+/* For Iphone 6 */
 @media (max-width: 376px){
     .card-styling{
         width: 20rem;
@@ -79,6 +89,7 @@
     }
 }
 
+/* For Iphone 5 */
 @media (max-width: 321px){
     .card-styling{
         width: 18rem;
@@ -89,6 +100,7 @@
     }
 }
 
+/* For Galaxy Fold */
 @media (max-width: 281px){
     .card-styling{
         width: 15rem;

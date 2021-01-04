@@ -4,6 +4,7 @@ body{
     margin: 0px;
 }
 
+/* Preloader Styling */
 .loader{
     height: 100%;
     width: 100%;
@@ -13,6 +14,7 @@ body{
     background-color: lightgray;
 }
 
+/* Header  */
 .header{
     font-family: 'Montserrat', sans-serif;
     width: 100%; 
@@ -21,6 +23,7 @@ body{
     display: flex;
 }
 
+/* Profile */
 .profile-header{
     display: flex; 
     padding-top: 40px;
@@ -37,6 +40,7 @@ body{
     width: 100px;
 }
 
+/* Card Style */
 .card-styling{
     -webkit-box-shadow: 0 0 10px #fff;
     box-shadow: 0 0 40px rgb(218, 210, 210);
@@ -64,6 +68,7 @@ body{
     height: 50px;
 }
 
+/* logo div */
 .log{
     padding-top: 50px;
 }
@@ -72,6 +77,10 @@ body{
     padding-top: 0%; padding-left: 5%;
 }
 
+
+/* Media Queries */
+
+/* For Ipad Pro */
 @media (max-width: 1025px){
 
     .header{
@@ -100,6 +109,7 @@ body{
     }
 }
 
+/* For Ipad */
 @media (max-width: 769px){
     .profile-header{
         padding-top: 50px;
