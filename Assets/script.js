@@ -15,16 +15,16 @@ var href = window.location.href.split("/")
 var html_location = href[href.length - 1]
 
 if (window.innerWidth > 540 && html_location !== "index.html") {
-    window.location = "../index.html";
+    window.location = "./index.html";
 }
 
 if (window.innerWidth <= 540 && html_location !== "index2.html") {
-    window.location = "../index2.html";
+    window.location = "./index2.html";
 }
 
 
 // Fetching data from api
-fetch('https://impact-run-api.herokuapp.com/')
+fetch('http://localhost:3000/')
 .then(response => response.json())
 .then(json => {
 
