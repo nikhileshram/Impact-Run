@@ -1,19 +1,18 @@
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || '3000';
+const PORT = process.env.PORT || '5050';
 const cors = require('cors')
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const MongoClient = require('mongodb').MongoClient
 app.use(cors())
-
 var email = '';
 app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000,
     keys: ['Passportjs']
 }));
-
+app.use(express.static('Assets'))
 // Initializaing Passport
 app.use(passport.initialize());
 app.use(passport.session());
@@ -22,7 +21,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: '719256991297-bu26jv3n5ntvs2h66afno1hl019orp7e.apps.googleusercontent.com',
     clientSecret: 'sEQLhEXmh1xg5J-vxrr0gGNO',
-    callbackURL: "http://localhost:3000/google/callback/"
+    callbackURL: "http://localhost:5050/google/callback/"
 },
     // Function coming back with all profile information from google
     function (accessToken, refreshToken, profile, cb) {
@@ -45,9 +44,8 @@ passport.deserializeUser((user, done) => {
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 // redirecting after google authentication
-app.get('/google/callback', passport.authenticate('google', { failureRedirect: '/google' }), (req, res) => {
+app.get('/google/callback', passport.authenticate('google', { successRedirect: '/index' }), (req, res) => {
     console.log(email)
-    res.redirect('/')
 })
 
 // Connecting to MongoDB, fetching data from MongoDB and sending data 
@@ -60,6 +58,10 @@ app.get('/', (req, res) => {
             res.send(result)
         })
     })
+})
+
+app.get('/index', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
 })
 
 app.listen(PORT)
