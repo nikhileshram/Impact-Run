@@ -64,4 +64,8 @@ app.get('/index', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/index2', (req, res) => {
+    res.sendFile(__dirname + '/index2.html')
+})
+
 app.listen(PORT)

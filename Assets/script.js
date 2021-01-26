@@ -14,13 +14,13 @@ window.onresize = function (event) {
 var href = window.location.href.split("/")
 var html_location = href[href.length - 1]
 
-// if (window.innerWidth > 540 && html_location !== "index.html") {
-//     window.location = "index.html";
-// }
+if (window.innerWidth > 540 && html_location !== "index") {
+    window.location.href = '/index';
+}
 
-// if (window.innerWidth <= 540 && html_location !== "index2.html") {
-//     window.location = "index2.html";
-// }
+if (window.innerWidth <= 540 && html_location !== "index2") {
+    window.location.href = '/index2';
+}
 
 
 // Fetching data from api
